@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<title>GitHub Finder - One Page to Search All GitHub Users</title>
+	<meta name="description" content="GitHub User Finder is a Vanilla JS (ES6 & ES7) based web application to find GitHub users, their latest 5 repos and other details about them as you press one key at a time from your keyboard">
+</head>
+<body>
+	<nav class="navbar navbar-dark bg-primary mb-3">
+		<div class="container">
+			<a href="" class="navbar-brand">GitHub Finder</a>
+		</div>
+	</nav>
+	<div class="container search-container">
+		<div class="search card card-body">
+			<h2>Search GitHub Users</h2>
+			<p class="lead">Enter a username to fetch a user profile and repos from GitHub</p>
+			<input type="text" placeholder="GitHub Username..." id="search-user" class="form-control mb-2">
+		</div>
+		<br>
+		<div id="profile"></div>
+	</div>
+	<footer class="mt-5 p-3 text-center bg-light">
+		GitHub Finder &copy;
+	</footer>
+	<script src="./assets/js/github-finder-classes.js"></script>
+	<script src="./assets/js/ui-classes.js"></script>
+	<script src="./assets/js/app.js"></script>
+</body>
+</html>
