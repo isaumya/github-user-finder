@@ -4,27 +4,51 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/devicon/devicon.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/devicon/devicon-colors.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/custom.css">
 	<title>GitHub Finder - One Page to Search All GitHub Users</title>
-	<meta name="description" content="GitHub User Finder is a Vanilla JS (ES6 & ES7) based web application to find GitHub users, their latest 5 repos and other details about them as you press one key at a time from your keyboard">
+	<meta name="description" content="GitHub User Finder is a Vanilla JS (ES6 &amp; ES7) based web application to find GitHub users, their latest 5 repos and other details about them as you press one key at a time from your keyboard">
 </head>
 <body>
 	<nav class="navbar navbar-dark bg-primary mb-3">
 		<div class="container">
-			<a href="" class="navbar-brand">GitHub Finder</a>
+			<a href="" class="navbar-brand"><i class="devicon-github-plain mr-2"></i> GitHub Finder</a>
 		</div>
 	</nav>
 	<div class="container search-container">
 		<div class="search card card-body">
 			<h2>Search GitHub Users</h2>
 			<p class="lead">Enter a username to fetch a user profile and repos from GitHub</p>
-			<input type="text" placeholder="GitHub Username..." id="search-user" class="form-control mb-2">
-		</div>
-		<br>
+			<div class="form-group">
+				<div class="input-group mb-2">
+					<div class="input-group-prepend">
+						<span class="input-group-text">
+							<i class="devicon-github-plain mr-2"></i>
+							Username
+						</span>
+					</div>
+					<input type="text" placeholder="Type any GitHub Username..." id="search-user" class="form-control">
+				</div>
+			</div>
+			</div>
+		<div class="mb-4"></div>
 		<div id="profile"></div>
+		<div id="how-to">
+			<div class="card text-white bg-info mb-2">
+				<div class="card-header">How to use the GitHub Finder?</div>
+				<div class="card-body">
+					<h4 class="card-title">It is as easy as doing a Google search!</h4>
+					<p class="card-text">GitHub Finder makes it super easy to find any random GitHub user and see their work. Just start typing any username and
+						with each key stroke if there is any GitHub user with that username the details about their profile and their latest
+						5 repositories will show up here.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	<footer class="mt-5 p-3 text-center bg-light">
-		GitHub Finder &copy;
+		GitHub Finder &copy; <span class="curr-year"></span> - <a href="https://www.isaumya.com" target="_blank">Saumya Majumder</a> - All Rights Reserved
 	</footer>
 	<script src="./assets/js/github-finder-classes.js"></script>
 	<script src="./assets/js/ui-classes.js"></script>
