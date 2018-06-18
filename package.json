@@ -1,0 +1,38 @@
+{
+  "name": "github-user-finder",
+  "version": "1.0.0",
+  "description": "GitHub User Finder is a Vanilla JS (ES6 & ES7) based web application to find GitHub users, their latest 5 repos and other details about them as you press one key at a time from your keyboard",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server --output-public-path=/build/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaumya/github-user-finder.git"
+  },
+  "keywords": [
+    "github",
+    "user",
+    "finder",
+    "search",
+    "web-app",
+    "javascript"
+  ],
+  "author": "Saumya Majumder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaumya/github-user-finder/issues"
+  },
+  "homepage": "https://github.com/isaumya/github-user-finder#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.4.3",
+    "webpack": "^4.12.0",
+    "webpack-dev-server": "^3.1.4"
+  }
+}
