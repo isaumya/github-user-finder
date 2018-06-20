@@ -1,4 +1,4 @@
-// Add the require statements
+// Add the require statements of es6-promise polyfill & isomorphic-fetch to make sure after js compilation, the fetch works on old browsers like IE 11, 10.
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
