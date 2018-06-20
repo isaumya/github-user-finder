@@ -109,18 +109,18 @@ export default class UI {
 			repos.forEach( (repo) => {
 				// Check if the repo has any public demo url or homepage link provided, then show that as well
 				let homepage;
-				if(repo.homepage !== null || repo.homepage !== '') {
-					homepage = `<a href="${repo.homepage}" target="_blank" class="btn btn-primary mb-3">Visit Homepage/Demo Website</a>`;
-				} else {
+				if(repo.homepage === null || repo.homepage === '') {
 					homepage = '';
+				} else {
+					homepage = `<a href="${repo.homepage}" target="_blank" class="btn btn-primary mb-3">Visit Homepage/Demo Website</a>`;
 				}
 
 				// Check if the repo has any project description, then show it
 				let projectDesc;
-				if(repo.description !== null || repo.description  !== '') {
-					projectDesc = `<p class="repo-description card-text">${repo.description}</p>`;
-				} else {
+				if(repo.description === null || repo.description  === '') {
 					projectDesc = '';
+				} else {
+					projectDesc = `<p class="repo-description card-text">${repo.description}</p>`;
 				}
 
 				output += `
