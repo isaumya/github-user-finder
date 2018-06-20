@@ -1,3 +1,7 @@
+// Add the require statements
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
+
 // Import the GitHubFinder Class
 import GitHubFinder from './github-finder-classes'
 // Import UI classes
