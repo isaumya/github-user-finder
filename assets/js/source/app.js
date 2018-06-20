@@ -46,5 +46,37 @@ searchUser.addEventListener('keyup', (e) => {
 	}
 });
 
+// Add click event lister for checking the repo sort dropdown click using event deligation as the element is added dynamically
+let selectIndex = 99;
+document.getElementById('profile').addEventListener('click', (e) => {
+	if(e.target.classList.contains('repo-sort')) {
+		// Selected Index List:
+		// 0: Nothing
+		// 1 : Latest Created
+		// 2: Latest Updated
+		const userName = document.getElementById('search-user').value;
+		if(selectIndex !== e.target.selectedIndex) {
+			selectIndex = e.target.selectedIndex;
+			if(selectIndex === 0) {
+				github.getUser(userName, 'created')
+				.then( (response) => {
+					ui.showRepos(response.repos);
+				})
+				.catch( (err) => {
+					ui.showAlert(err, 'alert alert-danger');
+				});
+			} else if( selectIndex === 1 ) {
+				github.getUser(userName, 'pushed')
+				.then( (response) => {
+					ui.showRepos(response.repos);
+				})
+				.catch( (err) => {
+					ui.showAlert(err, 'alert alert-danger');
+				});
+			}
+		}
+	}
+});
+
 // Show the current year in the copyright section
 document.querySelector('.curr-year').textContent = (new Date().getFullYear() === 2018) ? new Date().getFullYear().toString() : `2018 - ${new Date().getFullYear().toString()}`;

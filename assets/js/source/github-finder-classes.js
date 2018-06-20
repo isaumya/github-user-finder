@@ -10,11 +10,11 @@ export default class GitHubFinder {
 		this.client_id = '63efe4f7da3f2257e398';
 		this.client_secret = 'c18ca07325c29934f7bf6facae47231455fd7e56';
 		this.repo_count = 5;
-		this.repo_sort = 'created: asc';
+		//this.repo_sort = 'created: asc';
 	}
 
 	// Create Get User Method
-	async getUser(user) {
+	async getUser(user, repo_sort = 'created') {
 		// Set up the try-catch block
 		try {
 			// Fetch the GitHub Profile API and Await for it
@@ -36,7 +36,7 @@ export default class GitHubFinder {
 			}
 
 			// Fetch the GitHub API for fetching the latest repos by that user
-			const repoResponse = await fetch(`https://api.github.com/users/${user}/repos?per_page=${this.repo_count}&sort=${this.repo_sort}&client_id=${this.client_id}&client_secret=${this.client_secret}`);
+			const repoResponse = await fetch(`https://api.github.com/users/${user}/repos?per_page=${this.repo_count}&sort=${repo_sort}&order=asc&client_id=${this.client_id}&client_secret=${this.client_secret}`);
 
 			// Check if the response is OK, else throw error
 			let repoData;

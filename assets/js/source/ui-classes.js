@@ -75,7 +75,19 @@ export default class UI {
 				</div>
 			</div>
 		</div>
-		<h3 class="page-heading mb-3">Latest 5 Repos</h3>
+		<div class="row">
+			<div class="col-md-9">
+				<h3 class="page-heading mb-3">Latest 5 Repos</h3>
+			</div>
+			<div class="col-md-3">
+				<div class="form-group">
+					<select id="repo-sort" class="custom-select repo-sort">
+						<option selected="selected" value="1">Latest 5 Created</option>
+						<option value="2">Latest 5 Updated</option>
+					</select>
+				</div>
+			</div>
+		</div>
 		<div id="repos"></div>
 		`;
 	}

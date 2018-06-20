@@ -1,5 +1,5 @@
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	devtool: "source-map",
 	entry: ["babel-polyfill", './assets/js/source/app.js'],
 	output: {
