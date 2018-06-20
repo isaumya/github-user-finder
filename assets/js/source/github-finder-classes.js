@@ -5,7 +5,7 @@
  * @license GPL
  * @returns Promises
 **/
-class GitHubFinder {
+export default class GitHubFinder {
 	constructor() {
 		this.client_id = '63efe4f7da3f2257e398';
 		this.client_secret = 'c18ca07325c29934f7bf6facae47231455fd7e56';

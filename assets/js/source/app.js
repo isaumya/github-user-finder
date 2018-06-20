@@ -1,3 +1,8 @@
+// Import the GitHubFinder Class
+import GitHubFinder from './github-finder-classes'
+// Import UI classes
+import UI from './ui-classes';
+
 // Init GitHubFinder Class
 const github = new GitHubFinder;
 // Init UI Class

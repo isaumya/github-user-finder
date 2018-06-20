@@ -1,7 +1,7 @@
 /**
  * UI Class for handling UI operations
 **/
-class UI {
+export default class UI {
 	constructor() {
 		this.profile = document.getElementById('profile');
 	}
