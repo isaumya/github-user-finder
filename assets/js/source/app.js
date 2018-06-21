@@ -60,7 +60,7 @@ document.getElementById('profile').addEventListener('click', (e) => {
 			if(selectIndex === 0) {
 				github.getUser(userName, 'created')
 				.then( (response) => {
-					document.getElementById('repos').innerHTML = `<img src="../../img/loading.gif" id="loading"/>`;
+					document.getElementById('repos').innerHTML = `<img src="../img/loading.gif" id="loading"/>`;
 					setTimeout(() => {
 						document.getElementById('loading').remove();
 						ui.showRepos(response.repos);
