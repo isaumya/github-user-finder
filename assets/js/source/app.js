@@ -60,7 +60,11 @@ document.getElementById('profile').addEventListener('click', (e) => {
 			if(selectIndex === 0) {
 				github.getUser(userName, 'created')
 				.then( (response) => {
-					ui.showRepos(response.repos);
+					document.getElementById('repos').innerHTML = `<img src="../../img/loading.gif" id="loading"/>`;
+					setTimeout(() => {
+						document.getElementById('loading').remove();
+						ui.showRepos(response.repos);
+					}, 2000);
 				})
 				.catch( (err) => {
 					ui.showAlert(err, 'alert alert-danger');
@@ -68,7 +72,11 @@ document.getElementById('profile').addEventListener('click', (e) => {
 			} else if( selectIndex === 1 ) {
 				github.getUser(userName, 'pushed')
 				.then( (response) => {
-					ui.showRepos(response.repos);
+					document.getElementById('repos').innerHTML = `<img src="../../img/loading.gif" id="loading"/>`;
+					setTimeout(() => {
+						document.getElementById('loading').remove();
+						ui.showRepos(response.repos);
+					}, 2000);
 				})
 				.catch( (err) => {
 					ui.showAlert(err, 'alert alert-danger');
