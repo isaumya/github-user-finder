@@ -82,7 +82,8 @@ export default class UI {
 			<div class="col-md-3">
 				<div class="form-group">
 					<select id="repo-sort" class="custom-select repo-sort">
-						<option selected="selected" value="1">Latest 5 Created</option>
+						<option disabled="disabled" selected="selected" value="0">Sort the Repos by:</option>
+						<option value="1">Latest 5 Created</option>
 						<option value="2">Latest 5 Updated</option>
 					</select>
 				</div>

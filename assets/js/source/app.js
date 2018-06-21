@@ -57,26 +57,26 @@ document.getElementById('profile').addEventListener('click', (e) => {
 		const userName = document.getElementById('search-user').value;
 		if(selectIndex !== e.target.selectedIndex) {
 			selectIndex = e.target.selectedIndex;
-			if(selectIndex === 0) {
+			if(selectIndex === 1) {
 				github.getUser(userName, 'created')
 				.then( (response) => {
-					document.getElementById('repos').innerHTML = `<img src="../img/loading.gif" id="loading" class="mx-auto"/>`;
+					document.getElementById('repos').innerHTML = `<img src="./assets/img/loading.gif" id="loading" class="mx-auto d-block"/>`;
 					setTimeout(() => {
 						document.getElementById('loading').remove();
 						ui.showRepos(response.repos);
-					}, 2000);
+					}, 3000);
 				})
 				.catch( (err) => {
 					ui.showAlert(err, 'alert alert-danger');
 				});
-			} else if( selectIndex === 1 ) {
+			} else if( selectIndex === 2 ) {
 				github.getUser(userName, 'pushed')
 				.then( (response) => {
-					document.getElementById('repos').innerHTML = `<img src="../../img/loading.gif" id="loading"/>`;
+					document.getElementById('repos').innerHTML = `<img src="./assets/img/loading.gif" id="loading" class="mx-auto d-block"/>`;
 					setTimeout(() => {
 						document.getElementById('loading').remove();
 						ui.showRepos(response.repos);
-					}, 2000);
+					}, 3000);
 				})
 				.catch( (err) => {
 					ui.showAlert(err, 'alert alert-danger');
